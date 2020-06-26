@@ -46,3 +46,6 @@
 [submodule "pack/dvcirilo/start/vim-easy-align"]
 	path = pack/dvcirilo/start/vim-easy-align
 	url = https://github.com/junegunn/vim-easy-align.git
+[submodule "pack/dvcirilo/start/goyo.vim"]
+	path = pack/dvcirilo/start/goyo.vim
+	url = https://github.com/junegunn/goyo.vim
