@@ -48,6 +48,9 @@ nnoremap Y y$
 nmap <Down> gj
 nmap <Up> gk
 
+"open new line with <CR>
+nmap <CR> o<Esc>
+
 "statusline setup when lighline is not present
 set statusline=%f               "tail of the filename
 set statusline+=%m              "modified flag
