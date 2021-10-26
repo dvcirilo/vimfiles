@@ -2,28 +2,28 @@
 "This must be first, because it changes other options as a side effect.
 set nocompatible
 
-"allow backspacing over everything in insert mode
+"UTF-8 encoding
+set encoding=utf-8
+
+" allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
 "store lots of :cmdline history
 set history=1000
 
 set showcmd         "show incomplete cmds down the bottom
-set showmode        "show current mode down the bottom
+"set showmode        "show current mode down the bottom
 
 set incsearch       "find the next match as we type the search
 set hlsearch        "hilight searches by default
 
 set number          "add line numbers
-set wrap linebreak
-set showbreak=...
+set wrap linebreak "wrap, but dont break words
+"set showbreak=...  "break indicator
 "set showbreak=↪\ 
 
 "adds to the path recursively
 set path+=**
-
-"show line in column 80
-set colorcolumn=80
 
 "disable visual bell
 set visualbell t_vb=
@@ -40,13 +40,10 @@ au BufNewFile,BufRead *.v set ft=verilog
 "spellcheck for txt and tex files
 au BufNewFile,BufRead,BufEnter *.tex setlocal spell
 au BufNewFile,BufRead,BufEnter *.txt setlocal spell
+au BufNewFile,BufRead,BufEnter *.md setlocal spell
 
 "make Y consistent with C and D
 nnoremap Y y$
-
-"try to make possible to navigate within lines of wrapped lines
-nmap <Down> gj
-nmap <Up> gk
 
 "open new line with <CR>
 nmap <CR> o<Esc>
@@ -76,15 +73,15 @@ if !has('nvim') && &ttimeoutlen == -1
     set ttimeout
     set ttimeoutlen=100
 endif
+
 " Use <C-L> to clear the highlighting of :set hlsearch.
 if maparg('<C-L>', 'n') ==# ''
     nnoremap <silent> <C-L> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
 endif
-set ruler
-set display+=lastline
-set encoding=utf-8
 
-"set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
+set display+=lastline
+
+set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
 set listchars=tab:→\ ,eol:↲,space:␣,nbsp:+,trail:•,extends:⟩,precedes:⟨
 
 set formatoptions+=j " Delete comment character when joining commented lines
@@ -95,20 +92,21 @@ endif
 
 set autoread
 
+"Allow at least 50 tabs to be open with -p option
 if &tabpagemax < 50
   set tabpagemax=50
 endif
+
 if !empty(&viminfo)
   set viminfo^=!
+  set viminfo+=n~/.vim/viminfo
 endif
+
 set sessionoptions-=options
 
-
-
 "indent settings for specific langs
-au FileType ruby setlocal ts=2 sw=2 sts=2
-au FileType tex setlocal ts=2 sw=2 sts=2 tw=79 fo+=t fo-=l
-au FileType markdown setlocal ts=2 sw=2 sts=2
+au FileType tex setlocal      fo+=t fo-=l ts=2 sw=2 sts=2
+"au FileType markdown setlocal ts=4 sw=4 sts=4
 
 "folding settings
 set foldmethod=indent           "fold based on indent
@@ -127,6 +125,7 @@ set sidescroll=1
 "load ftplugins and indent files
 filetype plugin on
 filetype indent on
+
 "turn on syntax highlighting
 syntax on
 
@@ -151,12 +150,45 @@ set undodir=$HOME/.vim/tmp//,/tmp// " where to save undo histories
 set undolevels=100         " How many undos
 set undoreload=1000       " number of lines to save for undo
 
-"set railscasts colorscheme when running vim in gnome terminal
-if split($TERM,"-")[1] ==? '256color'
+"uses 24bit colors if possible
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
+
+"set railscasts colorscheme when running vim in a 256 color term
+if $TERM =~ '256'
   set t_Co=256
-  colorscheme railscasts
+  set background=dark
+  let g:gruvbox_contrast_dark='hard'
+  colorscheme gruvbox
 else
   colorscheme default
+endif
+
+"show line in column 80
+"set colorcolumn=80
+hi Bang ctermbg=red guibg=red
+match Bang /\%>79v.*\%<81v/
+"highlight ColorColumn ctermbg=red
+"call matchadd('ColorColumn', '\%80v', 100)
+
+if has('gui_running')
+    set guifont=Monaco\ for\ Powerline\ 12
+
+    " toolbar and scrollbars
+    set guioptions-=T       " remove toolbar
+    set guioptions-=m       " remove menu
+    set guioptions-=L       " left scroll bar
+    set guioptions-=r       " right scroll bar
+    set guioptions-=b       " bottom scroll bar
+    set guioptions-=h      " only calculate bottom scroll size of current line
+    set shortmess=atI       " Don't show the intro message at start and
+                            "   truncate msgs (avoid press ENTER msgs).
+  set background=dark
+  let g:gruvbox_contrast_dark='hard'
+  colorscheme gruvbox
 endif
 
 " ***********************
@@ -179,3 +211,9 @@ xmap ga <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
+" Goyo plugin makes text more readable when writing text/tex:
+map <leader>f :Goyo<CR>
+
+" Solve deprecation notice
+let g:snipMate = { 'snippet_version' : 1 }
