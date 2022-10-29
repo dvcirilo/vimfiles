@@ -49,3 +49,6 @@
 [submodule "pack/dvcirilo/start/goyo.vim"]
 	path = pack/dvcirilo/start/goyo.vim
 	url = https://github.com/junegunn/goyo.vim
+[submodule "pack/dvcirilo/start/vim-markdown"]
+	path = pack/dvcirilo/start/vim-markdown
+	url = https://github.com/preservim/vim-markdown.git
