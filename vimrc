@@ -191,6 +191,8 @@ if has('gui_running')
   colorscheme gruvbox
 endif
 
+cmap <F3> <C-R>=strftime("%Y%m%d%H%M%S")<CR>.md
+
 " ***********************
 " *** Plugin Settings ***
 " ***********************
