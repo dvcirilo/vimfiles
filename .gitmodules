@@ -10,3 +10,6 @@
 [submodule "pack/dvcirilo/start/vim-repeat"]
 	path = pack/dvcirilo/start/vim-repeat
 	url = https://github.com/tpope/vim-repeat
+[submodule "pack/dvcirilo/start/systemverilog.vim"]
+	path = pack/dvcirilo/start/systemverilog.vim
+	url = https://github.com/nachumk/systemverilog.vim.git
