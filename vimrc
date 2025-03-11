@@ -204,7 +204,6 @@ cmap <F3> <C-R>=strftime("%Y%m%d%H%M%S")<CR>.md
 
 "use packadd to add optional plugins
 packadd! matchit             "included matchit plugin
-packadd! limelight.vim       "included limelight plugin
 
 "NERD_Tree conf
 let NERDTreeWinPos="left"
