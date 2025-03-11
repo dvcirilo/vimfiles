@@ -1,0 +1,12 @@
+[submodule "pack/dvcirilo/start/nerdtree"]
+	path = pack/dvcirilo/start/nerdtree
+	url = https://github.com/preservim/nerdtree.git
+[submodule "pack/dvcirilo/start/lightline.vim"]
+	path = pack/dvcirilo/start/lightline.vim
+	url = https://github.com/itchyny/lightline.vim
+[submodule "pack/dvcirilo/start/vim-surround"]
+	path = pack/dvcirilo/start/vim-surround
+	url = https://github.com/tpope/vim-surround
+[submodule "pack/dvcirilo/start/vim-repeat"]
+	path = pack/dvcirilo/start/vim-repeat
+	url = https://github.com/tpope/vim-repeat
