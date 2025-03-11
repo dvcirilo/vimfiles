@@ -17,7 +17,7 @@ set showcmd         "show incomplete cmds down the bottom
 set incsearch       "find the next match as we type the search
 set hlsearch        "hilight searches by default
 
-set number          "add line numbers
+set number relativenumber          "add line numbers
 set wrap linebreak "wrap, but dont break words
 "set showbreak=...  "break indicator
 "set showbreak=↪\ 
@@ -37,7 +37,7 @@ let g:tex_flavor='latex'
 "set *.v files to Verilog
 au BufNewFile,BufRead *.v set ft=verilog
 
-"spellcheck for txt and tex files
+"spellcheck for text files
 au BufNewFile,BufRead,BufEnter *.tex setlocal spell
 au BufNewFile,BufRead,BufEnter *.txt setlocal spell
 au BufNewFile,BufRead,BufEnter *.md setlocal spell
@@ -82,7 +82,6 @@ endif
 set display+=lastline
 
 set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
-set listchars=tab:→\ ,eol:↲,space:␣,nbsp:+,trail:•,extends:⟩,precedes:⟨
 
 set formatoptions+=j " Delete comment character when joining commented lines
 
@@ -106,6 +105,8 @@ set sessionoptions-=options
 
 "indent settings for specific langs
 au FileType tex setlocal      fo+=t fo-=l ts=2 sw=2 sts=2
+au FileType html,htmldjango,javascript setlocal      fo+=t fo-=l ts=2 sw=2 sts=2
+au FileType systemverilog setlocal      fo+=t fo-=l ts=2 sw=2 sts=2
 "au FileType markdown setlocal ts=4 sw=4 sts=4
 
 "folding settings
@@ -157,7 +158,7 @@ if exists('+termguicolors')
   set termguicolors
 endif
 
-"set railscasts colorscheme when running vim in a 256 color term
+"set gruvbox colorscheme when running vim in a 256 color term
 if $TERM =~ '256'
   set t_Co=256
   set background=dark
@@ -202,10 +203,12 @@ cmap <F3> <C-R>=strftime("%Y%m%d%H%M%S")<CR>.md
 "shoud be placed in ~/.vim/pack/dvcirilo/opt/
 
 "use packadd to add optional plugins
-packadd! matchit         "included matchit plugin
+packadd! matchit             "included matchit plugin
+packadd! limelight.vim       "included limelight plugin
 
 "NERD_Tree conf
 let NERDTreeWinPos="left"
+"let NERDTreeSortOrder=['\/$', '*', '[[-timestamp]]']
 silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
@@ -216,6 +219,8 @@ nmap ga <Plug>(EasyAlign)
 
 " Goyo plugin makes text more readable when writing text/tex:
 map <leader>f :Goyo<CR>
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
 
-" Solve deprecation notice
-let g:snipMate = { 'snippet_version' : 1 }
+" Hardtime!!
+let g:hardtime_default_on = 0
