@@ -8,6 +8,7 @@
 - [Vim Commentary](https://github.com/tpope/vim-commentary)
 - [Vim Indent Guides](https://github.com/preservim/vim-indent-guides)
 - [systemverilog](https://github.com/nachumk/systemverilog)
+- [gruvbox](https://github.com/morhetz/gruvbox)
 
 ## To download:
 

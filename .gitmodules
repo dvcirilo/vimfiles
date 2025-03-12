@@ -19,3 +19,6 @@
 [submodule "pack/dvcirilo/start/vim-indent-guides"]
 	path = pack/dvcirilo/start/vim-indent-guides
 	url = https://github.com/preservim/vim-indent-guides.git
+[submodule "pack/dvcirilo/start/gruvbox"]
+	path = pack/dvcirilo/start/gruvbox
+	url = https://github.com/morhetz/gruvbox.git
