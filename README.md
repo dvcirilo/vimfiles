@@ -5,6 +5,7 @@
 - [lightline](https://github.com/itchyny/lightline)
 - [Vim Surround](https://github.com/tpope/vim-surround)
 - [Vim Repeat](https://github.com/tpope/vim-repeat)
+- [Vim Commentary](https://github.com/tpope/vim-commentary)
 - [systemverilog](https://github.com/nachumk/systemverilog)
 
 ## To download:

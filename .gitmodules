@@ -13,3 +13,6 @@
 [submodule "pack/dvcirilo/start/systemverilog.vim"]
 	path = pack/dvcirilo/start/systemverilog.vim
 	url = https://github.com/nachumk/systemverilog.vim.git
+[submodule "pack/dvcirilo/start/vim-commentary"]
+	path = pack/dvcirilo/start/vim-commentary
+	url = https://github.com/tpope/vim-commentary.git
