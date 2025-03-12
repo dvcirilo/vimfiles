@@ -16,3 +16,6 @@
 [submodule "pack/dvcirilo/start/vim-commentary"]
 	path = pack/dvcirilo/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
+[submodule "pack/dvcirilo/start/vim-indent-guides"]
+	path = pack/dvcirilo/start/vim-indent-guides
+	url = https://github.com/preservim/vim-indent-guides.git

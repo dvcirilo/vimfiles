@@ -6,6 +6,7 @@
 - [Vim Surround](https://github.com/tpope/vim-surround)
 - [Vim Repeat](https://github.com/tpope/vim-repeat)
 - [Vim Commentary](https://github.com/tpope/vim-commentary)
+- [Vim Indent Guides](https://github.com/preservim/vim-indent-guides)
 - [systemverilog](https://github.com/nachumk/systemverilog)
 
 ## To download:
