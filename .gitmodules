@@ -25,3 +25,6 @@
 [submodule "pack/dvcirilo/start/emmet-vim"]
 	path = pack/dvcirilo/start/emmet-vim
 	url = https://github.com/mattn/emmet-vim.git
+[submodule "pack/dvcirilo/start/supertab"]
+	path = pack/dvcirilo/start/supertab
+	url = https://github.com/ervandew/supertab.git

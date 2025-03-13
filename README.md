@@ -10,6 +10,7 @@
 - [systemverilog](https://github.com/nachumk/systemverilog)
 - [gruvbox](https://github.com/morhetz/gruvbox)
 - [emmet-vim](https://github.com/mattn/emmet-vim)
+- [supertab](https://github.com/ervandew/supertab)
 
 ## To download:
 
