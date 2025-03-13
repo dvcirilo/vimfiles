@@ -46,7 +46,7 @@ au BufNewFile,BufRead,BufEnter *.md setlocal spell
 nnoremap Y y$
 
 "open new line with <CR>
-nmap <CR> o<Esc>
+" nmap <CR> o<Esc>
 
 "statusline setup when lighline is not present
 set statusline=%f               "tail of the filename
@@ -103,12 +103,6 @@ endif
 
 set sessionoptions-=options
 
-"indent settings for specific langs
-au FileType tex setlocal      fo+=t fo-=l ts=2 sw=2 sts=2
-au FileType html,htmldjango,javascript setlocal      fo+=t fo-=l ts=2 sw=2 sts=2
-au FileType systemverilog setlocal      fo+=t fo-=l ts=2 sw=2 sts=2
-"au FileType markdown setlocal ts=4 sw=4 sts=4
-
 "folding settings
 set foldmethod=indent           "fold based on indent
 set foldnestmax=3               "deepest fold is 3 levels
@@ -129,6 +123,15 @@ filetype indent on
 
 "turn on syntax highlighting
 syntax on
+
+" Omni completion
+set omnifunc=syntaxcomplete#Complete
+set completefunc=syntaxcomplete#Complete
+
+"indent settings for specific langs
+au FileType tex setlocal      fo+=t fo-=l ts=2 sw=2 sts=2
+au FileType html,htmldjango,javascript,css setlocal      fo+=t fo-=l ts=2 sw=2 sts=2
+"au FileType markdown setlocal ts=4 sw=4 sts=4
 
 "dont continue comments when pushing o/O
 au FileType * set formatoptions-=o
