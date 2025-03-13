@@ -28,3 +28,15 @@
 [submodule "pack/dvcirilo/start/supertab"]
 	path = pack/dvcirilo/start/supertab
 	url = https://github.com/ervandew/supertab.git
+[submodule "pack/dvcirilo/start/vim-snipmate"]
+	path = pack/dvcirilo/start/vim-snipmate
+	url = https://github.com/garbas/vim-snipmate.git
+[submodule "pack/dvcirilo/start/vim-addon-mw-utils"]
+	path = pack/dvcirilo/start/vim-addon-mw-utils
+	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule "pack/dvcirilo/start/tlib_vim"]
+	path = pack/dvcirilo/start/tlib_vim
+	url = https://github.com/tomtom/tlib_vim.git
+[submodule "pack/dvcirilo/start/vim-snippets"]
+	path = pack/dvcirilo/start/vim-snippets
+	url = https://github.com/honza/vim-snippets.git

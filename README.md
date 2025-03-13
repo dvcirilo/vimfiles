@@ -11,6 +11,10 @@
 - [gruvbox](https://github.com/morhetz/gruvbox)
 - [emmet-vim](https://github.com/mattn/emmet-vim)
 - [supertab](https://github.com/ervandew/supertab)
+- [vim-snipmate](https://github.com/garbas/vim-snipmate) (and dependencies):
+    - [vim-addon-mw-util](https://github.com/MarcWeber/vim-addon-mw-utils)
+    - [tlib_vim](https://github.com/tomtom/tlib_vim)
+- [vim-snippets](https://github.com/honza/vim-snippets)
 
 ## To download:
 
