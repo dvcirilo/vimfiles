@@ -22,3 +22,6 @@
 [submodule "pack/dvcirilo/start/gruvbox"]
 	path = pack/dvcirilo/start/gruvbox
 	url = https://github.com/morhetz/gruvbox.git
+[submodule "pack/dvcirilo/start/emmet-vim"]
+	path = pack/dvcirilo/start/emmet-vim
+	url = https://github.com/mattn/emmet-vim.git

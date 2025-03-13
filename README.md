@@ -9,6 +9,7 @@
 - [Vim Indent Guides](https://github.com/preservim/vim-indent-guides)
 - [systemverilog](https://github.com/nachumk/systemverilog)
 - [gruvbox](https://github.com/morhetz/gruvbox)
+- [emmet-vim](https://github.com/mattn/emmet-vim)
 
 ## To download:
 
